@@ -17,9 +17,48 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        primarySwatch: Colors.blue,
+        primaryColor: Colors.blue,
         brightness: Brightness.light,
+        buttonTheme: ButtonThemeData(
+          buttonColor: Colors.blue,
+          textTheme: ButtonTextTheme.primary,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blue,
+            foregroundColor: Colors.white,
+            textStyle: TextStyle(fontSize: 18),
+          ),
+        ),
+        textTheme: TextTheme(
+          bodyLarge: TextStyle(fontSize: 24, color: Colors.black),
+          bodyMedium: TextStyle(fontSize: 20, color: Colors.black),
+          bodySmall: TextStyle(fontSize: 18, color: Colors.black),
+        ),
       ),
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      darkTheme: ThemeData(
+        primarySwatch: Colors.teal,
+        primaryColor: Colors.teal,
+        brightness: Brightness.dark,
+        buttonTheme: ButtonThemeData(
+          buttonColor: Colors.teal,
+          textTheme: ButtonTextTheme.primary,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.teal,
+            foregroundColor: Colors.white,
+            textStyle: TextStyle(fontSize: 18),
+          ),
+        ),
+        textTheme: TextTheme(
+          bodyLarge: TextStyle(fontSize: 24, color: Colors.white),
+          bodyMedium: TextStyle(fontSize: 20, color: Colors.white),
+          bodySmall: TextStyle(fontSize: 18, color: Colors.white),
+        ),
+      ),
+      themeMode: ThemeMode.system,
       home: MainPage(),
     );
   }

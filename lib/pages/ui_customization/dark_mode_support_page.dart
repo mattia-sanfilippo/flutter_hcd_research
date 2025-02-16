@@ -5,7 +5,7 @@ class DarkModeSupportPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Dark Mode support')),
-      body: Center(child: Text('Dark Mode support content')),
+      body: Center(child: Text('Switch system theme to test dark mode')),
     );
   }
 }
