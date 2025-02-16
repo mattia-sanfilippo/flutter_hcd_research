@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'pages/accessibility/accessibility_page.dart';
 import 'pages/internationalization/internationalization_page.dart';
@@ -16,6 +18,17 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: {
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      },
+      supportedLocales: [
+        Locale('en'), // English
+        Locale('fr'), // French
+        Locale('ar'), // Arabic (to check RTL)
+      ],
       theme: ThemeData(
         primarySwatch: Colors.blue,
         primaryColor: Colors.blue,
