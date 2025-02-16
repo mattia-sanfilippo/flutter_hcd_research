@@ -5,7 +5,10 @@ class ScreenReaderSupportPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Screen reader support')),
-      body: Center(child: Text('Screen reader support content')),
+      body: Semantics(
+        label: 'This is a screen reader support page',
+        child: Text('Screen reader support page'),
+      )
     );
   }
 }

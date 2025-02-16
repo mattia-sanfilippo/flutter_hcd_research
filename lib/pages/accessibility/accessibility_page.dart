@@ -4,7 +4,6 @@ import 'semantic_elements_page.dart';
 import 'dynamic_text_scaling_page.dart';
 import 'contrast_color_inversion_page.dart';
 import 'keyboard_navigation_page.dart';
-import 'focus_management_page.dart';
 
 class AccessibilityPage extends StatelessWidget {
   @override
@@ -59,15 +58,6 @@ class AccessibilityPage extends StatelessWidget {
                 );
               },
               child: Text('Keyboard navigation'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => FocusManagementPage()),
-                );
-              },
-              child: Text('Focus management'),
             ),
           ],
         ),

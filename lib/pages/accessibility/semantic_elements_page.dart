@@ -5,7 +5,21 @@ class SemanticElementsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Semantic elements and ARIA roles')),
-      body: Center(child: Text('Semantic elements and ARIA roles content')),
+      body: Column(
+        children: [
+          Semantics(
+            header: true,
+            child: Text('Profile', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+          ),
+          Semantics(
+            button: true,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: Text('Save'),
+            )
+          )
+        ],
+      ),
     );
   }
 }
